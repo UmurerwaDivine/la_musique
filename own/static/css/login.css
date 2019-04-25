@@ -1,0 +1,9 @@
+body{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("https://wallup.net/wp-content/uploads/2016/01/49990-music-Music_is_Life-3D-748x421.jpg");
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+
+}
+form{
+    background-color: transparent;
+}

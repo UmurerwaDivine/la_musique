@@ -1,0 +1,63 @@
+{% extends 'base.html' %} 
+{%load bootstrap3%}
+{% load static %}
+
+{%block content%}
+
+  </head>
+  <body>
+    <div class="container"id="new">
+<h3>New Releases</h3>
+
+        {%for song in songs%}
+      <div class="col-sm-4 col-md-4">
+          
+         <a  href="song/{{song.id}}" href="details.html"><img src="{{song.pic.url}}"  class="img-responsive" alt=""class="img-fluid" id="myimage" ></a>
+          <h3>{{song.songName}}<i class="fa fa-music" aria-hidden="true"></i>
+           </h3> 
+           <audio src="{{song.audio_track}}" autoplay>
+            Your browser does not support the audio element.
+        </audio>
+        </div>
+        
+    </div>
+    
+      
+    
+     {%endfor%}
+     <h1>Library</h1>
+     <div class="row">
+      <div class="container"id="charts">
+        <h3>Top Charts</h3>
+        
+                {%for song in songs%}
+                <div class="row">
+                  <h3 style="font-size:18px;color:aliceblue">{{song.id}}. {{song.songName}}<i class="fa fa-music" aria-hidden="true"></i>
+                   </h3>    
+                 <!-- <audio controls>
+                    <source src="{{song.audio_track}}" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>      -->
+                </div>
+                {%endfor%}
+                
+    </body>
+{%endblock%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

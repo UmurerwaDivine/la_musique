@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+</head>
+
+<body>
+   
+    <nav class="navbar navbar-default">
+        <!-- <div class="container-fluid"> -->
+            
+              <div class=" col-md-6 col-sm-6 " id="title">
+              <h5><img src="https://i.pinimg.com/originals/df/72/ca/df72cafcdda0f34d211fdd19eb2cb669.png" width='100'height='80'>La Musica </h5>
+              
+              </div>
+              <div class="col-md-6 col-sm-6">
+               <form class="navbar-form" role="search" action="{% url 'search_results' %}">
+    
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="search project" name="pic">
+                  <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                  </div>
+                </div>
+              </div>
+      
+              </form>
+                     
+            </div>
+           
+  
+    <div class="col-md-6">
+      <div id="sidebar">
+        <div class="toggle-btn" onclick="toggleSidebar()" type="submit">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        {% if user.is_authenticated %}
+        <ul>
+            <li>
+                <a href="/"><i class="fa fa-home" aria-hidden="true"></i>
+                  Home</a>
+              </li>
+              
+              <li>
+                  <a href="{% url 'profile' %}"><i class="fa fa-user" aria-hidden="true"></i>
+                    View Profile</a>
+               </li>
+               <li>
+                <a href="{% url 'profile' %}"><i class="fa fa-user" aria-hidden="true"></i>
+                  create playlist</a>
+             </li>
+              <li>
+                <a href="/accounts/password/change">Change Password</a>
+              </li>
+              <li>
+                <a href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+              </li>
+              
+        </ul>
+        {% else %}
+        <li>
+          <a class='btn btn-default' href="/accounts/login"><i class="fa fa-sign-in" aria-hidden="true"></i>
+            Login</a>
+        </li>
+      </ul>
+        {% endif %}
+      </div>
+            
+            
+          </div>
+      </div>
+    </nav>
+    <script>
+      function toggleSidebar(){
+        document.getElementById("sidebar").classList.toggle('active')
+    }
+    
+    </script>
+      <!-- search form end -->
+

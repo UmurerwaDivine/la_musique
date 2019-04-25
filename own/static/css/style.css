@@ -1,0 +1,148 @@
+body{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://wallpapercave.com/wp/wp2587747.png');
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    font-family: 'Satisfy', cursive;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#sidebar{
+    position: fixed;
+    width: 200px;
+    height: 100px;
+    background-color: #151719;
+    left: -200px;
+    transition: all 500ms linear;
+    
+}
+#sidebar.active{
+    left: 0px;
+}
+#sidebar ul li {
+    color: aliceblue;
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(100,100,100,0.3);
+}
+#sidebar .toggle-btn{
+    position: absolute;
+    left: 200px;
+    top: 30px;
+}
+#sidebar .toggle-btn span{
+    display: block;
+    width: 30px;
+    height: 5px;
+    background-color: white;
+    margin: 5px 0px;
+    
+}
+h5{
+    text-align: center;
+    font-size: 50px;
+    color:darkcyan;
+}
+form a{
+    color: grey;
+}
+.wrapper{
+    position: absolute;
+    top:300px;
+    left: 40%;
+    transform: translate(-50%,-50%);
+
+}
+.search-box{
+    width: 350px;
+    height: 100px;
+    position: relative;
+}
+.input{
+   position: absolute;
+   box-sizing: border-box;
+   top: 20px;
+   right: 30px;
+   border: 1px solid #151719;
+   border-radius:  50px;
+   padding:0 20px;
+   outline: none;
+   font-size: 18px;
+   color: black;
+   transition: all 0.8s ease;
+   width: 0px;
+   height:63px ;
+
+}
+::-webkit-input-placeholder{
+    color:grey;
+}
+::-moz-input-placeholder{
+    color:grey;
+}
+::-ms-input-placeholder{
+    color:grey;
+}
+.submit{
+    position: absolute;
+    background-color: #151719;
+    width: 80px;
+    height: 80px;
+    top: 13px;
+    right: 28px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 80px;
+    color:#fff;
+    transition: all 0.8s ease;
+    border-radius: 50%;
+    font-size: 20px;
+
+
+}
+.input.active{
+    width:350px;
+    right: 100px;
+}
+.submit.animate{
+    transform: rotate(-360deg);
+    right:100px; 
+}
+#myimage{
+    width:150px;
+    height: 160px;
+    box-shadow: 1px 2px 3px black;
+}
+#myimage:hover{
+    opacity: 0.5;
+    box-shadow: 0px 2px 3px;
+}
+.navbar{
+    background: transparent;
+    border: none;
+}
+li a{
+    color: white;
+    font-size: 20px;
+}
+#title{
+    padding-left: 300px;
+}
+#new{
+    color: white;
+    
+    /* background-size: cover; */
+
+}
+#charts{
+    background-image: url("https://wallpaperdj.com/download/vinyl_life-1600x1200.jpg");
+
+}
+/* #new{
+    border:1px solid darkcyan;
+    box-shadow: 1px 2px 3px  black;
+    border-radius: 30px;
+}
+ */
+

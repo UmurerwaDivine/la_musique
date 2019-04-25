@@ -1,0 +1,36 @@
+{% extends 'base.html' %} 
+{%load bootstrap3%}
+{% load static %}
+{%block content%}
+<div class="container">
+    
+    
+      <img src="{{song.pic.url}}"  class="img-responsive" alt="" >
+      <h3><i class="fa fa-play-circle" aria-hidden="true" style="font-size:18px;color:aliceblue"></i>{{song.songName}}</h3>
+      <h4 style="font-size:18px;color:aliceblue">{{song.artistName}}</h4>
+      <!-- <audio controls> -->
+          <audio src="{{song.audio_track}}" autoplay>
+          Your browser does not support the audio element.
+      </audio>
+      <p style="font-size:18px;color:aliceblue">{{song.lyrics}}</p>
+    </div>
+{%endblock%}
+    <div class="row">
+      
+    </div>
+   
+   
+ </div> 
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
